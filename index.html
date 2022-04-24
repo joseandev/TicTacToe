@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <title>TicTacToe Game</title>
+</head>
+<body>
+
+    <section>
+        <h2 class="title">TicTacToe Game</h2>
+        
+        <h4 class="turn-player">Es el turno del jugador: O</h4>
+
+        <div class="counter counter-x">
+            <h2>X</h2>
+            <p>0</p>
+        </div>
+        <div class="board">
+            <button class="tile unpresioned-tile" id="pos1"></button><button class="tile unpresioned-tile" id="pos2"></button><button class="tile unpresioned-tile" id="pos3"></button>
+            <button class="tile unpresioned-tile" id="pos4"></button><button class="tile unpresioned-tile" id="pos5"></button><button class="tile unpresioned-tile" id="pos6"></button>
+            <button class="tile unpresioned-tile" id="pos7"></button><button class="tile unpresioned-tile" id="pos8"></button><button class="tile unpresioned-tile" id="pos9"></button>
+        </div>
+
+        <div class="counter counter-o">
+            <h2>O</h2>
+            <p>0</p>
+        </div>
+
+        <div class="container-buttons">
+            <button class="reset-button">Reset Game</button>
+
+            <button class="restart-button"><i class="bi bi-arrow-clockwise"></i></button>
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>

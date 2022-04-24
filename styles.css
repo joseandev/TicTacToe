@@ -1,0 +1,165 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(8, 102, 102);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+    position: relative;
+}
+
+.board {
+    display: grid;
+    width: 300px;
+    height: 300px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: .3em;
+    background-color: #fff;
+    margin: 1.5em 0;
+    padding: .2em;
+}
+
+.title {
+    font-size: 35px;
+    color: #fff;
+    font-weight: 100;
+}
+
+.turn-player {
+    font-size: 22px;
+    color: #ddd;
+    margin-top: .2em;
+    font-weight: 100;
+}
+
+.tile, .presioned-tile {
+    color: #fff;
+    font-size: 2.6em;
+    border: none;
+}
+
+.tile {
+    background-color: rgb(8, 102, 102);
+}
+
+.tile:hover {
+    background-color: rgb(24, 145, 145);
+}
+
+.presioned-tile {
+    background-color: rgb(24, 145, 145);
+}
+
+.reset-button {
+    font-size: 20px;
+    padding: .4em .6em;
+    border: none;
+    border-radius: .2em;
+    background-color: rgb(8, 102, 102);
+    border: .1em solid #fff;
+    color: #fff;
+    cursor: pointer;
+    height: 40px;
+}
+
+.reset-button:hover {
+    background-color: rgb(24, 145, 145);
+}
+
+.counter {
+    border: 2px solid #ddd;
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    width: 110px;
+}
+
+.counter-x { right: 20%; }
+.counter-o { left: 20%;}
+
+.counter h2 {
+    color: rgb(8, 102, 102);
+    background-color: #ddd;
+    font-size: 40px;
+}
+
+.counter p {
+    color: #ddd;
+    font-size: 50px;
+    margin: 5px auto;
+}
+
+.restart-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 5px 15px;
+    border: .1em solid #fff;
+    border-radius: .2em;
+    color: #ddd;
+    font-size: 25px;
+    font-weight: bolder;
+    margin-bottom: 50px;
+    margin-left: auto;
+    height: 40px;
+}
+
+.restart-button:hover {
+    background-color: rgb(24, 145, 145);
+}
+
+.animation-win, .animation-nowinner {
+    animation-name: win;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.animation-nowinner {
+    animation-iteration-count: 6;
+}
+
+@keyframes win {
+    from {
+        background-color: rgb(24, 145, 145);
+    }
+    to {
+        background-color: rgb(8, 102, 102);
+    }
+}
+
+.container-buttons {
+    display: flex;
+    width: 300px;
+}
+
+@media screen and (max-width: 400px) {
+    section {
+        margin-top: 19vh;
+    }
+    
+    .board {
+        width: 250px;
+        height: 250px;
+    }
+
+    .tile {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .counter-x { right: 2%;}
+    .counter-o { left: 2%;}
+}
